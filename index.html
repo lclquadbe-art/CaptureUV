@@ -398,7 +398,7 @@ function WebCanvasCapture(ptr, size, imgFileName) {
   const blob = new Blob([view], { type: "image/png" });
 
   const a = document.createElement("a");
-  a.download = safeName.endsWith(".png") ? ("uv"+safeName) : ("uv"+safeName + ".png");
+  a.download = safeName.endsWith(".png") ? ("uv_"+safeName) : ("uv_"+safeName + ".png");
 
   // Safari/일부 브라우저 안정성: a를 DOM에 붙였다가 클릭
   const url = URL.createObjectURL(blob);
